@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/dashcss.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="css/132.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <title>All Blogs</title>
+</head>
+<body>
+  <nav>
+    <ul>
+        <li>
+            <a href="#" class="logo">
+                <img src="Images/faid.jpeg" alt="">
+                <span class="nav-item">Faid Terence JABO</span>
+            </a>
+        </li>
+        <li><a href="panel.html">
+            <i class="fas fa-home"></i>
+            <span class="nav-item">DASHBOARD</span>
+        </a></li>
+        <li><a href="https://mail.google.com/mail/u/0/#inbox">
+            <i class="fas fa-envelope"></i>
+            <span class="nav-item">MAIL BOX</span>
+        </a></li>
+        <li><a href="panel.html">
+            <i class="fas fa-chart-bar"></i>
+            <span class="nav-item">ANALTYICS</span>
+        </a></li>
+        <li><a href="index.html">
+            <i class="fas fa-tasks"></i>
+            <span class="nav-item">ARTICLES</span>
+        </a></li>
+        <li><a href="create.html">
+            <i class="fa-solid fa-plus"></i>
+            <span class="nav-item">ADD NEW</span>
+        </a></li>
+        <li><a href="https://calendar.google.com/calendar/u/0/r?tab=mc">
+            <i class="fas fa-calendar"></i>
+            <span class="nav-item">CALENDAR</span>
+        </a></li>
+        <li><a href="C:\Users\Dr. Doreen Wa JJ\Desktop\Portfolio Website\Admin\settings.html">
+            <i class="fas fa-cog"></i>
+            <span class="nav-item">Settings</span>
+        </a></li>
+        <li><a href="index.html" class="logout">
+            <i class="fas fa-sign-out-alt"></i>
+            <span class="nav-item">LOGOUT</span>
+        </a></li>
+    </ul>
+</nav>
+<section>
+  <navbar>
+    <h1>Existing Blogs</h1>
+  </navbar>
+  <form class="search">
+    <input type="text" name="term" placeholder="Search for a Blog">
+    <button type="submit" class="hi">Search</button>
+  </form>
+ 
+  <table class="blogs">
+    
+   
+    
+  </table>
+  <div id="modelbox" class="modelbox">
+  <form id="newform" class="update">
+    <label>Icon Link:</label><br>
+    <input type="text" id="icon" required placeholder="Icon Type">
+    <label>Article Title:</label><br>
+    <input type="text" id="title" required placeholder="Blog title">
+    <label>Article Body:</label><br>
+    
+    <textarea id="body" required placeholder="Blog body"></textarea>
+    <button class="editblog" onclick="updateBlog()">Update</button>
+  </form>
+</div>
+</section>
+  <script src="js/index.js"></script>
+</body>
+</html>

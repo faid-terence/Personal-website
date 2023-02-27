@@ -1,0 +1,31 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Software Development",
+      "body": "Positive Impact",
+      "icon": "fa-regular fa-code"
+    },
+    {
+      "icon": "fa fa-laptop-code",
+      "title": "Artificial Intelligence",
+      "body": "Negative Impact",
+      "id": 2
+    },
+    {
+      "icon": "fa fa-laptop-code",
+      "title": "Greetings",
+      "body": "How are you doing?",
+      "id": 3
+    }
+  ],
+  "user": [
+    {
+      "names": "Faid Terence JABO",
+      "email": "faidterence@outlook.com",
+      "phone": "+250784673536",
+      "password": "AdminT",
+      "role": "admin"
+    }
+  ]
+}
