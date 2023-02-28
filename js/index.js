@@ -1,9 +1,9 @@
 let articleid="";
-const container = document.querySelector('.blogs');
+const container = document.getElementById('BLOG');
 const searchForm = document.querySelector('.search');
 
 const renderPosts = async (term) => {
-    let uri = 'http://localhost:3000/posts?_sort=likes&_order=desc';
+    let uri = 'https://good-jade-cheetah-wrap.cyclic.app/posts?_sort=likes&_order=desc';
     if (term) {
         uri += `&q=${term}`;
     }
@@ -12,13 +12,7 @@ const renderPosts = async (term) => {
     let template = '';
     posts.forEach(post => {
         template += `
-        <tr>
-      <th>No</th>
-      <th>Title</th>
-      <th>Body</th>
-      <th>Actions</th>
-      </tr>
-      </thead>
+      
         <tr>
         <td>${post.id}</td>  
         <td>${post.title}</td>
@@ -33,33 +27,35 @@ const renderPosts = async (term) => {
 
     container.innerHTML = template;
 }
-const clientBlog = async()=>
-{
-    const response =await fetch ("http://localhost:3000/posts");
-    const blogsContent =document.querySelector('.container');
-    let temp = "";
-    post.forEach(post =>
-        {
-            temp+=`
-            <div class="card padd-15">
-      <i class="${post.icon}"></i>
-      <h5>${post.title}</h5>
-      <p>${post.body.slice(0, 200)}</p>
-      <p style="text-align: center;">
-      <a class="button" href="#">Read More</a></p>
-  </div>
-            `
-        });
-        blogsContent.innerHTML=temp;
-}
 
+
+const fetch_clientBlog = async () => {
+    const response = await fetch("https://good-jade-cheetah-wrap.cyclic.app/posts");
+    const post = await response.json();
+    const BlogsContent = document.getElementById('CLIENT');
+    let temp = "";
+    post.forEach((post) => {
+
+        temp += `
+        <div class="card padd-15">
+        <i class="${post.icon}"></i>
+        <h5>${post.title}</h5>
+        <p>${post.body.slice(0,200)}</p>
+        <p style="text-align: center;">
+        <a class="button" href="">Read More</a></p>
+    </div>
+            `
+    });
+    BlogsContent.innerHTML = temp;
+}
+fetch_clientBlog();
 
 
 
 
 const deleteBlog=async(blogid)=>
 {
-    await fetch(`http://localhost:3000/posts/${blogid}`,{
+    await fetch(`https://good-jade-cheetah-wrap.cyclic.app/posts/${blogid}`,{
         method:"DELETE",
     });
 }
@@ -68,7 +64,7 @@ const form=document.getElementById("newform");
 modelBox.style.display="none";
 const openModel=async(blogid)=>
 {
-    const response= await fetch(`http://localhost:3000/posts/${blogid}`);
+    const response= await fetch(`https://good-jade-cheetah-wrap.cyclic.app/posts/${blogid}`);
         const post=await response.json();
     
         modelBox.style.display="block";
@@ -84,7 +80,7 @@ const updateBlog=async()=>
         title:form.title.value,
         body:form.body.value,
     }
-    const response= await fetch(`http://localhost:3000/posts/${articleid}`,
+    const response= await fetch(`https://good-jade-cheetah-wrap.cyclic.app/posts/${articleid}`,
     {
         method:"PUT",
         headers:{
