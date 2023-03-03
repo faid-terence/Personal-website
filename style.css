@@ -922,6 +922,10 @@ textarea
     {
         display: none;
     }
+    .aside .nav-toggler
+    {
+        display: block;
+    }
 }
 @media(max-width:767px)
 {
